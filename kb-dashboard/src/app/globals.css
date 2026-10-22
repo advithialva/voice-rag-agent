@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #102122;
+  --ink-soft: #3d5f5f;
+  --sand: #f8f3e8;
+  --paper: #fffdf6de;
+  --line: #dacdbc;
+  --sunrise: #ff6f4d;
+  --teal: #2f9b95;
+  --mint: #d8f2ef;
+  --peach: #ffe1d3;
+}
+
+@theme inline {
+  --font-sans: var(--font-display);
+  --font-mono: var(--font-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  color: var(--ink);
+  font-family: var(--font-display), "Trebuchet MS", "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at 10% 15%, var(--peach) 0%, transparent 42%),
+    radial-gradient(circle at 82% 10%, #d9eef9 0%, transparent 40%),
+    radial-gradient(circle at 85% 82%, var(--mint) 0%, transparent 33%),
+    linear-gradient(160deg, #fcf7ef 0%, #f6efe0 52%, #fef9f0 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background-color: #ffd4c6;
+}
+
+.app-shell {
+  margin: 0 auto;
+  max-width: 1180px;
+  padding: 2rem 1rem 3rem;
+}
+
+.panel {
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--paper);
+  box-shadow: 0 12px 35px rgba(16, 33, 34, 0.08);
+  backdrop-filter: blur(6px);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: 999px;
+  border: 1px solid #e7d5c3;
+  background: #fff8ec;
+  color: #76523e;
+  font-size: 0.73rem;
+  letter-spacing: 0.08em;
+  padding: 0.33rem 0.72rem;
+  text-transform: uppercase;
+}
+
+.rise-in {
+  animation: rise-in 420ms ease-out both;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.status-pill {
+  border-radius: 999px;
+  display: inline-flex;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.34rem 0.75rem;
+}
+
+.status-neutral {
+  background: #ece8de;
+  color: #4a4a45;
+}
+
+.status-success {
+  background: #ddf3ea;
+  color: #176448;
+}
+
+.status-error {
+  background: #fde5dc;
+  color: #8f3521;
+}

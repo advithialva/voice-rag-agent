@@ -1,0 +1,33 @@
+# config.yaml updated
+
+google:
+  project_id: "your-google-project-id"
+  region: "your-google-region"
+
+livekit:
+  host: "wss://your-project.livekit.cloud"
+  api_key: "${LIVEKIT_API_KEY}"
+  api_secret: "${LIVEKIT_API_SECRET}"
+
+agent:
+  name: "Voice RAG Assistant"
+  instructions:
+    You are a warm and friendly sales assistant.
+    For product and service questions, always call query_rag_database first.
+    For general questions, answer normally.
+
+  models:
+    llm:
+      # Gemini Native Audio — handles STT + reasoning + TTS in one model
+      model: "gemini-2.5-flash-native-audio-preview-12-2025"
+      voice: "Aoede"   # Options: Aoede, Charon, Fenrir, Kore, Puck
+      language: "en-US"
+  rag:
+    vectorstore_path: "./knowledge_base/faiss_index"
+    embedding_model: "BAAI/bge-m3"
+    retrieval_k: 6
+    llm_model: "gemini-2.5-flash"
+
+  voice_processing:
+    noise_cancellation: true
+    noise_cancellation_provider: "bvc"
