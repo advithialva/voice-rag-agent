@@ -116,10 +116,6 @@ pip install -r requirements.txt
 
 Create a `.env` file inside the `voice-core/` directory and add your credentials as described in the Environment Variables section below.
 
-## 🔐 Environment Variables
-
-The application requires credentials for LiveKit and Google Gemini. Create a `.env` file inside `voice-core/` and add the following variables:
-
 ```env
 # LiveKit connection
 LIVEKIT_URL=
