@@ -1,4 +1,4 @@
-# Voice RAG Agent: A Voice Sales Assistant Powered by Your Own Documents
+# RAG-based Voice Agent: AI-Powered Voice Sales Assistant
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
 ![FastAPI](https://img.shields.io/badge/FastAPI-API-green.svg)
